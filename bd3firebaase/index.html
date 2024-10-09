@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BD3 - FIREBASE</title>
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1> WEB APP LIBRI - FIREVASE: FIRESTORE</h1>
+    <div class="content">
+        <form id="add-book-form">
+            <input type="text" name="autor" placeholder="Nome do autor">
+            <input type="text" name="titulo" placeholder="Titulo do livro">
+            <button> CADASTRAR</button>
+
+        </form>
+        <ul id="book-list"></ul>
+
+    </div>
+
+
+
+</body>
+
+<!-- SDK DO FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+
+
+<!-- SDK DO FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+
+
+<!-- CONEXÃO COM O FIREBASE -->
+<script>
+
+    /*  DADOS DE CONEXÃO COM O FIREBASE  */
+    const firebaseConfig = {
+        apiKey: "AIzaSyB8FuxB-SvgaFTQjfMyUKJDTpSI1gqM_kM",
+        authDomain: "bd3-app-libri-kaique.firebaseapp.com",
+        projectId: "bd3-app-libri-kaique",
+        storageBucket: "bd3-app-libri-kaique.appspot.com",
+        messagingSenderId: "735620911790",
+        appId: "1:735620911790:web:c1c8d3ae24e085f087933f"
+    };
+
+    /* INICIALIZA O FIREBASE */
+    firebase.initializeApp(firebaseConfig)
+
+    /* INICIALIZA O FIRESTORE */
+    const db = firebase.firestore()
+    console.log(db)
+
+</script>
+
+<!-- IMPORTAÇÃO DO ARQUIVO app.js -->
+<script src="app.js"></script>
+
+
+</html>
